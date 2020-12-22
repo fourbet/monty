@@ -37,7 +37,7 @@ int main(int ac, char **av)
 		line_number++;
 		code_exit = 0;
 		opcode = parse(buffer, &head, line_number);
-		if (opcode == -1)
+		if (opcode == 1)
 		{
 			free(buffer);
 			free_stack(head);
