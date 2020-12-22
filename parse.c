@@ -34,7 +34,7 @@ int parse(char *buffer, stack_t **head, int line_number)
 		return (code_exit);
 	}
 	res = exec_opcodes(opcode, head, line_number);
-	if (res == -2)
+	if (res == -1)
 	{
 		fprintf(stderr, "L%d: unknown instruction %s\n", line_number, opcode);
 		code_exit = 1;

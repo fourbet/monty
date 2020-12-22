@@ -60,5 +60,5 @@ int exec_opcodes(char *opcode, stack_t **stack, int number_line)
 			return (code_exit);
 		}
 	}
-	return (-2);
+	return (-1);
 }
