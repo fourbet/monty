@@ -30,7 +30,6 @@ int main(int ac, char **av)
 	if (fd_read == NULL)
 	{
 		fprintf(stderr, "Error: Can't open file %s\n", av[1]);
-		fclose(fd_read);
 		exit(EXIT_FAILURE);
 	}
 	while (getline(&buffer, &bufsize, fd_read) != -1)
