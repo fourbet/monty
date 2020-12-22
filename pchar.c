@@ -17,13 +17,13 @@ void op_pchar(stack_t **head, unsigned int line_number)
 	if (current == NULL)
 	{
 		fprintf(stderr, "L%d: can't pchar, stack empty'\n", line_number);
-		code_exit = -1;
+		code_exit = 1;
 		return;
 	}
 	if (isascii(current->n) == 0)
 	{
 		fprintf(stderr, "L%d: can't pchar, value out of range\n", line_number);
-		code_exit = -1;
+		code_exit = 1;
 		return;
 	}
 	printf("%c\n", current->n);

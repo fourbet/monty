@@ -17,7 +17,7 @@ void op_pint(stack_t **head, unsigned int line_number)
 	if (current == NULL)
 	{
 		fprintf(stderr, "L%d: can't pint, stack empty\n", line_number);
-		code_exit = -1;
+		code_exit = 1;
 		return;
 	}
 	printf("%d\n", current->n);

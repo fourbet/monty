@@ -19,7 +19,7 @@ void op_add(stack_t **head, unsigned int line_number)
 	if (current == NULL || current->prev == NULL)
 	{
 		fprintf(stderr, "L%d: can't add, stack too short\n", line_number);
-		code_exit = -1;
+		code_exit = 1;
 		return;
 	}
 	previous = current->prev;

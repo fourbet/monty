@@ -27,7 +27,7 @@ int parse(char *buffer, stack_t **head, int line_number)
 		if (arg == NULL || digit == -1)
 		{
 			fprintf(stderr, "L%d: usage: push integer\n", line_number);
-			code_exit = -1;
+			code_exit = 1;
 			return (code_exit);
 		}
 		op_push(head, atoi(arg));
@@ -37,7 +37,7 @@ int parse(char *buffer, stack_t **head, int line_number)
 	if (res == -2)
 	{
 		fprintf(stderr, "L%d: unknown instruction %s\n", line_number, opcode);
-		code_exit = -1;
+		code_exit = 1;
 	}
 	return (code_exit);
 }

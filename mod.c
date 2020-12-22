@@ -19,13 +19,13 @@ void op_mod(stack_t **head, unsigned int line_number)
 	if (current == NULL || current->prev == NULL)
 	{
 		fprintf(stderr, "L%d: can't mod, stack too short\n", line_number);
-		code_exit = -1;
+		code_exit = 1;
 		return;
 	}
 	if (current->n == 0)
 	{
 		fprintf(stderr, "L%d: division by zero\n", line_number);
-		code_exit = -1;
+		code_exit = 1;
 		return;
 	}
 	previous = current->prev;

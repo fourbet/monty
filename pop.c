@@ -18,7 +18,7 @@ void op_pop(stack_t **head, unsigned int line_number)
 	if (current == NULL)
 	{
 		fprintf(stderr, "L%d: can't pop an empty stack\n", line_number);
-		code_exit = -1;
+		code_exit = 1;
 		return;
 	}
 	tmp = current->prev;

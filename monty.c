@@ -42,7 +42,7 @@ int main(int ac, char **av)
 			free(buffer);
 			free_stack(head);
 			fclose(fd_read);
-			exit(code_exit);
+			exit(EXIT_FAILURE);
 		}
 	}
 	free(buffer);
