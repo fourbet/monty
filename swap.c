@@ -19,7 +19,7 @@ void op_swap(stack_t **head, unsigned int line_number)
 	tmp = *head;
 	if (current == NULL || current->prev == NULL)
 	{
-		fprintf(stderr, "L%d:  can't swap, stack too short\n", line_number);
+		fprintf(stderr, "L%d: can't swap, stack too short\n", line_number);
 		code_exit = -1;
 		return;
 	}
