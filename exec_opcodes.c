@@ -36,6 +36,7 @@ int _strncmp(char *s1, char *s2, int n)
  *
  * @opcode: string
  * @stack: doubly linked list
+ * @number_line: int
  *
  * Return: 0(SUCCESS)
  */

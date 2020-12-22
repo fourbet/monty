@@ -5,6 +5,7 @@
  *
  * @buffer: string to parse
  * @head: pointer to a pointer to a stack_t
+ * @line_number: int
  *
  * Return: 0(SUCCESS), -1(FAILLURE)
  */
@@ -42,5 +43,5 @@ int parse(char *buffer, stack_t **head, int line_number)
 		return (-1);
 	}
 	else
-		return(code_exit);
+		return (code_exit);
 }
