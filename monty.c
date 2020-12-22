@@ -35,6 +35,7 @@ int main(int ac, char **av)
 	while (getline(&buffer, &bufsize, fd_read) != -1)
 	{
 		line_number++;
+		code_exit = 0;
 		opcode = parse(buffer, &head, line_number);
 		if (opcode == -1 || opcode == -2)
 		{
