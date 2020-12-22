@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
- * op_div - divides the seconde top element of the stack by the top
+ * op_sub - divides the seconde top element of the stack by the top
  *
  * @head: head of a stack_t
  * @line_number: line nbr of the opcode in the read file
