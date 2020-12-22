@@ -13,7 +13,7 @@ int main(int ac, char **av)
 {
 	FILE *fd_read;
 	char *s;
-	int line_number = 0;
+	unsigned int line_number = 0;
 	int opcode;
 	char *buffer = NULL;
 	size_t bufsize = 0;
