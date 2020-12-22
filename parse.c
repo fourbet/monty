@@ -31,7 +31,7 @@ int parse(char *buffer, stack_t **head, int line_number)
 			return (code_exit);
 		}
 		op_push(head, atoi(arg));
-		return (0);
+		return (code_exit);
 	}
 	res = exec_opcodes(opcode, head, line_number);
 	if (res == -2)

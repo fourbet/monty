@@ -17,7 +17,8 @@ void op_push(stack_t **head, int arg)
 	if (new == NULL)
 	{
 		fprintf(stderr, "Error: malloc failed\n");
-		exit(EXIT_FAILURE);
+		code_exit = -1;
+		return;
 	}
 	new->n = arg;
 	new->prev = NULL;
