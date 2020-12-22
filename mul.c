@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
- * op_sub - divides the seconde top element of the stack by the top
+ * op_mul - multiplies the seconde top element of the stack by the top
  *
  * @head: head of a stack_t
  * @line_number: line nbr of the opcode in the read file
@@ -9,7 +9,7 @@
  * Return: void
  */
 
-void op_div(stack_t **head, unsigned int line_number)
+void op_mul(stack_t **head, unsigned int line_number)
 {
 	stack_t *current;
 	stack_t *previous;
