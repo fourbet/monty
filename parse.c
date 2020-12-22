@@ -17,7 +17,7 @@ int parse(char *buffer, stack_t **head, int line_number)
 	char *arg = NULL;
 
 	opcode = strtok(buffer, "\n\t ");
-	if (opcode == NULL)
+	if (opcode == NULL || _strncmp(opcode, "#", 1) == 0)
 		return (0);
 	if (_strncmp(opcode, "push", _strlen("push")) == 0)
 	{
