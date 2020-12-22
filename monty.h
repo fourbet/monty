@@ -12,7 +12,6 @@
 #include <ctype.h>
 
 extern int code_exit;
-
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
@@ -62,5 +61,6 @@ void op_mul(stack_t **head, unsigned int line_number);
 void op_mod(stack_t **head, unsigned int line_number);
 void op_pchar(stack_t **head, unsigned int line_number);
 void op_pstr(stack_t **head, unsigned int line_number);
+void op_rotl(stack_t **head, unsigned int line_number);
 int check_integer(char *arg);
 #endif
