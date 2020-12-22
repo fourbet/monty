@@ -24,7 +24,8 @@ void op_pstr(stack_t **head, unsigned int line_number)
 	{
 		if (current->n == 0)
 		{
-			printf("\n");
+			if (passed == 1)
+				printf("\n");
 			return;
 		}
 		if (isascii(current->n) != 0)
@@ -34,7 +35,8 @@ void op_pstr(stack_t **head, unsigned int line_number)
 		}
 		else
 		{
-			printf("\n");
+			if (passed == 1)
+				printf("\n");
 			return;
 		}
 		current = current->prev;
