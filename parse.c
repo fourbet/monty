@@ -39,7 +39,7 @@ int parse(char *buffer, stack_t **head, int line_number)
 		fprintf(stderr, "L%d: unknown instruction %s\n", line_number, opcode);
 		code_exit = -1;
 	}
-	return (code_exit);
+	return (res);
 }
 /**
  * check_integer - checks if the string contains only integer
