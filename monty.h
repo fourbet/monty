@@ -11,8 +11,7 @@
 #include <stddef.h>
 #include <ctype.h>
 
-extern unsigned int line_number;
-
+extern int code_exit;
 
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
@@ -46,8 +45,8 @@ typedef struct instruction_s
 
 int _strlen(char *s);
 char *_strcat(char *dest, char *src);
-int exec_opcodes(char *opcode, stack_t **stack);
-int parse(char *buffer, stack_t **stack);
+int exec_opcodes(char *opcode, stack_t **stack, int number_line);
+int parse(char *buffer, stack_t **stack, int number_line);
 int _strncmp(char *s1, char *s2, int n);
 void op_push(stack_t **stack, int arg);
 void free_stack(stack_t *head);

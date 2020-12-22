@@ -8,7 +8,7 @@
  *
  * Return: 0(SUCCESS), -1(FAILLURE)
  */
-int parse(char *buffer, stack_t **head)
+int parse(char *buffer, stack_t **head, int line_number)
 {
 	int i = 0;
 	int digit = 0;
@@ -35,14 +35,12 @@ int parse(char *buffer, stack_t **head)
 		op_push(head, atoi(arg));
 		return (0);
 	}
-	res = exec_opcodes(opcode, head);
-	if (res != -1)
-	{
-		return (res);
-	}
-	else
+	res = exec_opcodes(opcode, head, line_number);
+	if (res == -2)
 	{
 		fprintf(stderr, "L%d: unknown instruction %s\n", line_number, opcode);
 		return (-1);
 	}
+	else
+		return(code_exit);
 }

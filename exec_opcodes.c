@@ -39,7 +39,7 @@ int _strncmp(char *s1, char *s2, int n)
  *
  * Return: 0(SUCCESS)
  */
-int exec_opcodes(char *opcode, stack_t **stack)
+int exec_opcodes(char *opcode, stack_t **stack, int number_line)
 {
 	instruction_t instr[] = {{"pall", op_pall}, {"pint", op_pint}, {"nop", op_nop}
 				 , {"pop", op_pop}, {"swap", op_swap}, {"add", op_add}
@@ -52,9 +52,10 @@ int exec_opcodes(char *opcode, stack_t **stack)
 	{
 		if (_strncmp(opcode, instr[i].opcode, _strlen(instr[i].opcode)) == 0)
 		{
-			instr[i].f(stack, line_number);
-			return (0);
+			code_exit = 0;
+			instr[i].f(stack, number_line);
+			return (code_exit);
 		}
 	}
-	return (-1);
+	return (-2);
 }
