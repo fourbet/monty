@@ -45,5 +45,5 @@ int main(int ac, char **av)
 	free(buffer);
 	free_stack(head);
 	fclose(fd_read);
-	return (code_exit);
+	exit(code_exit);
 }
