@@ -19,4 +19,5 @@ void op_pall(stack_t **head, unsigned int line_number)
 		printf("%d\n", current->n);
 		current = current->prev;
 	}
+	(void)line_number;
 }

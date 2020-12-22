@@ -53,12 +53,17 @@ char *_strcat(char *dest, char *src)
 
 void free_stack(stack_t *head)
 {
-	stack_t *tmp;
+	stack_t *current;
+
+	current = head;
+
+	if (current == NULL)
+		return;
 
 	while (head)
 	{
-		tmp = head;
-		head = head->next;
-		free(tmp);
+		current = head;
+		head = head->prev;
+		free(current);
 	}
 }

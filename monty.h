@@ -9,6 +9,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stddef.h>
+#include <ctype.h>
 
 extern unsigned int line_number;
 
@@ -52,4 +53,8 @@ void op_push(stack_t **stack, int arg);
 void free_stack(stack_t *head);
 void op_pall(stack_t **head, unsigned int line_number);
 void op_pint(stack_t **head, unsigned int line_number);
+void op_nop(stack_t **stack, unsigned int line_number);
+void op_pop(stack_t **head, unsigned int line_number);
+void op_swap(stack_t **head, unsigned int line_number);
+void op_add(stack_t **head, unsigned int line_number);
 #endif

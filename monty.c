@@ -15,7 +15,7 @@ int main(int ac, char **av)
 	char *s;
 	int opcode;
 	char *buffer = NULL;
-	ssize_t bufsize = 0;
+	size_t bufsize = 0;
 	stack_t *head = NULL;
 
 	if (ac != 2)
@@ -40,6 +40,7 @@ int main(int ac, char **av)
 		{
 			free(buffer);
 			fclose(fd_read);
+			free_stack(head);
 			exit(EXIT_FAILURE);
 		}
 	}

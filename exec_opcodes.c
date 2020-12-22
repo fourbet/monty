@@ -41,7 +41,9 @@ int _strncmp(char *s1, char *s2, int n)
  */
 int exec_opcodes(char *opcode, stack_t **stack)
 {
-	instruction_t instr[] = {{"pall", op_pall}, {"pint", op_pint}, {NULL, NULL}};
+	instruction_t instr[] = {{"pall", op_pall}, {"pint", op_pint}, {"nop", op_nop}
+				 , {"pop", op_pop}, {"swap", op_swap}, {"add", op_add}
+				 , {NULL, NULL}};
 	int i = 0;
 
 	if (opcode == NULL)

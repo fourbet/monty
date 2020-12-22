@@ -16,12 +16,12 @@ int parse(char *buffer, stack_t **head)
 	char *opcode = NULL;
 	char *arg = NULL;
 
-	opcode = strtok(buffer, "\n ");
+	opcode = strtok(buffer, "\n\t ");
 	if (opcode == NULL)
 		return (0);
 	if (_strncmp(opcode, "push", _strlen("push")) == 0)
 	{
-		arg = strtok(NULL, "\n ");
+		arg = strtok(NULL, "\n\t ");
 		for (i = 0; i < _strlen(arg); i++)
 		{
 			if (!isdigit(arg[i]))
