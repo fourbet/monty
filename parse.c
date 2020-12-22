@@ -11,8 +11,7 @@
  */
 int parse(char *buffer, stack_t **head, int line_number)
 {
-	int i = 0;
-	int digit = 0;
+	int i = 0, digit = 0;
 	int res = -1;
 	char *opcode = NULL;
 	char *arg = NULL;
@@ -25,8 +24,16 @@ int parse(char *buffer, stack_t **head, int line_number)
 		arg = strtok(NULL, "\n\t ");
 		for (i = 0; i < _strlen(arg); i++)
 		{
-			if (!isdigit(arg[i]))
-				digit = -1;
+			if (i == 0)
+			{
+				if (!isdigit(arg[0]) && arg[0] != '-')
+					digit = -1;
+			}
+			else
+			{
+				if (!isdigit(arg[i]))
+					digit = -1;
+			}
 		}
 		if (arg == NULL || digit == -1)
 		{
