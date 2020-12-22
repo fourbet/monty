@@ -24,9 +24,9 @@ extern int code_exit;
  */
 typedef struct stack_s
 {
-        int n;
-        struct stack_s *prev;
-        struct stack_s *next;
+	int n;
+	struct stack_s *prev;
+	struct stack_s *next;
 } stack_t;
 
 /**
@@ -39,8 +39,8 @@ typedef struct stack_s
  */
 typedef struct instruction_s
 {
-        char *opcode;
-        void (*f)(stack_t **stack, unsigned int line_number);
+	char *opcode;
+	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
 int _strlen(char *s);
@@ -56,4 +56,5 @@ void op_nop(stack_t **stack, unsigned int line_number);
 void op_pop(stack_t **head, unsigned int line_number);
 void op_swap(stack_t **head, unsigned int line_number);
 void op_add(stack_t **head, unsigned int line_number);
+void op_sub(stack_t **head, unsigned int line_number);
 #endif
