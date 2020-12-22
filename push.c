@@ -13,6 +13,7 @@ void op_push(stack_t **head, int arg)
 	stack_t *new;
 	stack_t *current;
 
+	code_exit = 0;
 	new = malloc(sizeof(stack_t));
 	if (new == NULL)
 	{
