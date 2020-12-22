@@ -18,18 +18,12 @@ void op_mul(stack_t **head, unsigned int line_number)
 	current = *head;
 	if (current == NULL || current->prev == NULL)
 	{
-		fprintf(stderr, "L%d: can't div, stack too short\n", line_number);
-		code_exit = -1;
-		return;
-	}
-	if (current->n == 0)
-	{
-		fprintf(stderr, "L%d: division by zero\n", line_number);
+		fprintf(stderr, "L%d: can't mul, stack too short\n", line_number);
 		code_exit = -1;
 		return;
 	}
 	previous = current->prev;
-	res = previous->n / current->n;
+	res = previous->n * current->n;
 	previous->n = res;
 	previous->next = NULL;
 	free(current);
