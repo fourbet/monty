@@ -39,10 +39,7 @@ int main(int ac, char **av)
 		opcode = parse(buffer, &head, line_number);
 		if (opcode == -1 || opcode == -2)
 		{
-			free(buffer);
-			free_stack(head);
-			fclose(fd_read);
-			exit(EXIT_FAILURE);
+			break;
 		}
 	}
 	free(buffer);
