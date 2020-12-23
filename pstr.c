@@ -20,7 +20,7 @@ void op_pstr(stack_t **head, unsigned int line_number)
 		printf("\n");
 		return;
 	}
-	while (current->prev)
+	while (current)
 	{
 		if (current->n == 0)
 		{
