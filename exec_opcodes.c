@@ -53,7 +53,7 @@ int exec_opcodes(char *opcode, stack_t **stack, int number_line)
 		return (-1);
 	for (i = 0; instr[i].opcode != NULL; i++)
 	{
-		if (_strncmp(opcode, instr[i].opcode, _strlen(instr[i].opcode)) == 0)
+		if (strcmp(opcode, instr[i].opcode) == 0)
 		{
 			code_exit = 0;
 			instr[i].f(stack, number_line);
