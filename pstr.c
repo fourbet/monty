@@ -17,7 +17,7 @@ void op_pstr(stack_t **head, unsigned int line_number)
 	current = *head;
 	if (current == NULL)
 	{
-		fprintf(stderr, "\n");
+		printf("\n");
 		return;
 	}
 	while (current)
